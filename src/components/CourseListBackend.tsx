@@ -21,6 +21,7 @@ export default function CourseListBackend() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {coursesBackend.map((course, index) => {
                         const isSQLCourse = course.title === "SQL for Web and Data Engineering";
+                        const isJSCourse = course.title === "JavaScript for Backend";
                         const CardContent = (
                             <motion.div
                                 key={index}
@@ -60,13 +61,23 @@ export default function CourseListBackend() {
                             </motion.div>
                         );
 
-                        return isSQLCourse ? (
-                            <Link key={index} href="/courses/sql">
-                                {CardContent}
-                            </Link>
-                        ) : (
-                            CardContent
-                        );
+                        if (isSQLCourse) {
+                            return (
+                                <Link key={index} href="/courses/sql">
+                                    {CardContent}
+                                </Link>
+                            );
+                        }
+
+                        if (isJSCourse) {
+                            return (
+                                <Link key={index} href="/courses/javascript-backend">
+                                    {CardContent}
+                                </Link>
+                            );
+                        }
+
+                        return CardContent;
                     })}
                 </div>
 

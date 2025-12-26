@@ -19,6 +19,7 @@ import Footer from "@/components/Footer";
 import { SparklesCore } from "@/components/ui/sparkles-core";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 
+
 const services = [
   {
     id: "courses",
@@ -264,6 +265,8 @@ export default function Landing() {
             </div>
           </section>
 
+
+
         </div>
       </main>
 
@@ -316,9 +319,8 @@ export default function Landing() {
               ].map((plan) => (
                 <div
                   key={plan.title}
-                  className={`relative rounded-2xl border bg-black/60 p-4 md:p-5 ${
-                    plan.badge ? "border-amber-400/40" : "border-white/10"
-                  }`}
+                  className={`relative rounded-2xl border bg-black/60 p-4 md:p-5 ${plan.badge ? "border-amber-400/40" : "border-white/10"
+                    }`}
                 >
                   {plan.badge && (
                     <span className="absolute -top-3 right-3 bg-amber-400 text-black text-[10px] font-bold uppercase tracking-[0.16em] px-3 py-1 rounded-full">

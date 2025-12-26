@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SparklesCore } from "@/components/ui/sparkles-core";
 import { Users, Star, ArrowRight } from "lucide-react";
 
+
 const categories = [
   { id: "all", label: "All" },
   { id: "backend", label: "Backend" },
@@ -134,6 +135,7 @@ export default function MentorsPage() {
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
+
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-amber-400/30 text-xs md:text-sm text-amber-100 font-mono uppercase tracking-[0.3em] shadow-[0_10px_40px_rgba(251,191,36,0.08)]">
               Mentors
@@ -153,11 +155,10 @@ export default function MentorsPage() {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-4 py-2 rounded-full border text-sm font-bold uppercase tracking-[0.14em] transition-colors ${
-                    isActive
-                      ? "bg-amber-400 text-black border-amber-500 shadow-[0_10px_30px_rgba(251,191,36,0.25)]"
-                      : "border-amber-400/30 text-amber-100 hover:border-amber-300/60"
-                  }`}
+                  className={`px-4 py-2 rounded-full border text-sm font-bold uppercase tracking-[0.14em] transition-colors ${isActive
+                    ? "bg-amber-400 text-black border-amber-500 shadow-[0_10px_30px_rgba(251,191,36,0.25)]"
+                    : "border-amber-400/30 text-amber-100 hover:border-amber-300/60"
+                    }`}
                 >
                   {cat.label}
                 </button>

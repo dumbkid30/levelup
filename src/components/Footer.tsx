@@ -5,7 +5,8 @@ import {
   IconBrandDiscord,
   IconBrandGithub,
   IconBrandLinkedin,
-  IconBrandX
+  IconBrandX,
+  IconBrandWhatsapp
 } from "@tabler/icons-react";
 import { Mail } from "lucide-react";
 import Image from "next/image";
@@ -21,10 +22,10 @@ export default function Footer() {
             <div>
               <div className="mb-4">
                 <Image
-                  src="/assets/logo/logo4.png"
+                  src="/assets/logo/logo.png"
                   alt="LevelUp Logo"
                   width={240}
-                  height={80}
+                  height={60}
                   className="object-contain"
                 />
               </div>
@@ -34,21 +35,14 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h3 className="font-bold text-lg">Subscribe to our newsletter</h3>
-              <div className="flex gap-0">
-                <div className="relative flex-grow">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full bg-zinc-900 border-2 border-white/10 border-r-0 p-3 pl-10 text-white placeholder-zinc-600 focus:outline-none focus:border-yellow-500 font-pixel"
-                    suppressHydrationWarning
-                  />
-                </div>
-                <button className="bg-zinc-800 border-2 border-white/10 hover:bg-zinc-700 text-zinc-300 px-6 font-bold uppercase transition-colors text-sm">
-                  Notify Me
-                </button>
-              </div>
+              <h3 className="font-bold text-lg">Join our OG WhatsApp Group</h3>
+              <p className="text-zinc-400 text-sm">
+                Get exclusive job alerts, coding challenges, and mentorship.
+              </p>
+              <a href="https://chat.whatsapp.com/KQ4sWcUF5OTEy7ngJA6j7h" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-[#25D366] text-black px-5 py-3 font-bold rounded hover:bg-[#20bd5a] transition-colors w-fit">
+                <IconBrandWhatsapp size={24} />
+                <span>Join Community</span>
+              </a>
             </div>
 
             <div className="flex gap-4">
@@ -76,15 +70,15 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <h3 className="font-bold text-white uppercase tracking-wider">Guides</h3>
               <ul className="flex flex-col gap-3 text-zinc-400 text-sm">
-                <FooterLink href="#">Front End Interview Playbook</FooterLink>
-                <FooterLink href="#">Front End System Design Playbook</FooterLink>
-                <FooterLink href="#">React Interview Playbook</FooterLink>
+                <FooterLink href="#">API Integration Playbook</FooterLink>
+                <FooterLink href="#">System Design Playbook</FooterLink>
+                <FooterLink href="#">Design Patterns Playbook</FooterLink>
                 <FooterLink href="#">Behavioral Interview Playbook</FooterLink>
               </ul>
             </div>
 
             <div className="flex flex-col gap-4">
-              <h3 className="font-bold text-white uppercase tracking-wider">Study Plans</h3>
+              <h3 className="font-bold text-white uppercase tracking-wider">Mentor Plans</h3>
               <ul className="flex flex-col gap-3 text-zinc-400 text-sm">
                 <FooterLink href="#">1 Week Plan</FooterLink>
                 <FooterLink href="#">1 Month Plan</FooterLink>
