@@ -94,7 +94,7 @@ CRITICAL INSTRUCTIONS - YOU MUST FOLLOW THESE RULES:
    - Use tools (e.g., web search / browsing) to look up the company, and when possible open its AmbitionBox review and salary pages.
    - Extract concrete data from those sources: overall rating, 2–3 key pros/cons themes, and 1–3 representative salary ranges.
    - **OUTPUT FORMAT (STRICT):** 3–6 bullet points covering:
-     - Rating: include the numeric rating (e.g., 3.6/5) if you know it; if not, say `Rating: unknown`.
+     - Rating: include the numeric rating (e.g., 3.6/5) if you know it; if not, say "Rating: unknown".
      - Work culture: one short sentence based on employee feedback.
      - Growth / learning: one short sentence.
      - Compensation: one short sentence that qualitatively compares pay (e.g., "competitive for the market", "below average"); mention example roles and ranges only if you've seen them.
