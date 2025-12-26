@@ -63,7 +63,11 @@ export const SparklesCore = (props: SparklesCoreProps) => {
             enable: true,
             mode: "repulse",
           },
-          resize: true,
+          // tsParticles v3 expects an object for resize, not a boolean
+          resize: {
+            enable: true,
+            delay: 0.5,
+          },
         },
         modes: {
           push: {
