@@ -123,6 +123,15 @@ export const coursesBackend = [
     image: "/rain-3582_256.gif",
     tags: ["SQL", "Database", "Data Engineering"],
   },
+  {
+    title: "Become an Expert in Git & GitHub in 4 Hours",
+    description:
+      "Master version control, branching, merging, and collaboration with a hands-on GitBash terminal experience.",
+    level: "Beginner to Intermediate",
+    duration: "4 Hours",
+    image: "/nature-3481_256.gif",
+    tags: ["Git", "GitHub", "DevOps"],
+  },
 ];
 
 export interface Job {

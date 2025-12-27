@@ -22,6 +22,7 @@ export default function CourseListBackend() {
                     {coursesBackend.map((course, index) => {
                         const isSQLCourse = course.title === "SQL for Web and Data Engineering";
                         const isJSCourse = course.title === "JavaScript for Backend";
+                        const isGitCourse = course.title === "Become an Expert in Git & GitHub in 4 Hours";
                         const CardContent = (
                             <motion.div
                                 key={index}
@@ -72,6 +73,14 @@ export default function CourseListBackend() {
                         if (isJSCourse) {
                             return (
                                 <Link key={index} href="/courses/javascript-backend">
+                                    {CardContent}
+                                </Link>
+                            );
+                        }
+
+                        if (isGitCourse) {
+                            return (
+                                <Link key={index} href="/courses/git">
                                     {CardContent}
                                 </Link>
                             );
