@@ -24,7 +24,7 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
         initialCode={lessonData.initialCode}
       />
     );
-  } catch (error) {
+  } catch (_error) {
     const fallbackData = {
       title: "JavaScript Lesson",
       subtopics: [

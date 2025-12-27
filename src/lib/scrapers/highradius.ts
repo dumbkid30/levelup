@@ -1,6 +1,6 @@
 import { Job } from "../data";
 
-export async function scrapeHighRadiusJobs(query: string = "Software Engineer"): Promise<Job[]> {
+export async function scrapeHighRadiusJobs(_query: string = "Software Engineer"): Promise<Job[]> {
     // Fallback "Link Only" scraper because HighRadius uses dynamic Greenhouse which is hard to scrape consistently.
     return [{
         id: `highradius-fallback-${Date.now()}`,

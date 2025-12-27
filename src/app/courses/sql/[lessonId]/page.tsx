@@ -2,18 +2,18 @@ import LessonView from "@/components/LessonView";
 
 export default async function LessonPage({ params }: { params: Promise<{ lessonId: string }> }) {
     const { lessonId } = await params;
-    
+
     try {
         const response = await fetch(
             `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'}/api/lessons/${lessonId}`
         );
-        
+
         if (!response.ok) {
             throw new Error('Lesson not found');
         }
-        
+
         const lessonData = await response.json();
-        
+
         return (
             <LessonView
                 lessonId={lessonId}
@@ -24,7 +24,7 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
                 initialCode={lessonData.initialCode}
             />
         );
-    } catch (error) {
+    } catch (_error) {
         const fallbackData = {
             title: "SQL Lesson",
             description: "This is a placeholder for the lesson content. In a real application, this content would be fetched from a database based on the lesson ID.",
@@ -32,7 +32,7 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
             hint: "Check the documentation if you get stuck.",
             initialCode: `-- Write your SQL query here\nSELECT * FROM users;`
         };
-        
+
         return (
             <LessonView
                 lessonId={lessonId}

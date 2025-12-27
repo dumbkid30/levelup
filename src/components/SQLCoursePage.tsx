@@ -56,7 +56,7 @@ export default function SQLCoursePage() {
         }
     ];
 
-    const totalTopics = modules.reduce((acc, module) => acc + module.topics.length, 0);
+    // const totalTopics = modules.reduce((acc, module) => acc + module.topics.length, 0);
     const freeTopics = modules.length * 2; // 2 free topics per module
     const progress = Math.round((completedTopics.length / freeTopics) * 100);
 
@@ -152,7 +152,7 @@ export default function SQLCoursePage() {
                                             >
                                                 <div className="bg-gray-900/50 border-x-2 border-b-2 border-gray-800 p-4 space-y-2">
                                                     {module.topics.map((topic, topicIndex) => {
-                                                        const globalIndex = moduleIndex * 100 + topicIndex;
+                                                        const _globalIndex = moduleIndex * 100 + topicIndex;
                                                         const continuousIndex = startingIndex + topicIndex + 1;
                                                         const isCompleted = completedTopics.includes(continuousIndex);
                                                         const isFree = topicIndex < 2; // First 2 topics are free

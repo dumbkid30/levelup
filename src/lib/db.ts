@@ -30,7 +30,7 @@ export async function getJobs(page: number = 1, limit: number = 10): Promise<{ j
             jobs: jobs.slice(start, end),
             total: jobs.length
         };
-    } catch (error) {
+    } catch (_error) {
         // If file doesn't exist, return empty
         return { jobs: [], total: 0 };
     }

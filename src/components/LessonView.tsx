@@ -19,7 +19,8 @@ interface TerminalLine {
     content: string;
 }
 
-export default function LessonView({ lessonId, title, description, task, hint, initialCode }: LessonViewProps) {
+// export default function LessonView({ lessonId, title, description, task, hint, initialCode }: LessonViewProps) {
+export default function LessonView({ lessonId, title, description, task, hint }: LessonViewProps) {
     const { xp, markTopicAsCompleted, completedTopics } = useUserProgress();
     const [terminalHistory, setTerminalHistory] = useState<TerminalLine[]>([
         { type: 'system', content: 'Welcome to the MySQL Monitor.  Commands end with ; or \\g.' },
@@ -181,9 +182,9 @@ export default function LessonView({ lessonId, title, description, task, hint, i
                     <div className="flex-1 p-4 overflow-y-auto">
                         {terminalHistory.map((line, index) => (
                             <div key={index} className={`mb-1 whitespace-pre-wrap ${line.type === 'input' ? 'text-white' :
-                                    line.type === 'error' ? 'text-red-400' :
-                                        line.type === 'system' ? 'text-gray-400' :
-                                            'text-gray-300'
+                                line.type === 'error' ? 'text-red-400' :
+                                    line.type === 'system' ? 'text-gray-400' :
+                                        'text-gray-300'
                                 }`}>
                                 {line.content}
                             </div>

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Play, RotateCw, Settings, Maximize2, X, Minus, Square } from "lucide-react";
+import { RotateCw, Settings, Maximize2 } from "lucide-react";
 
 export const CodePlayground = () => {
     return (

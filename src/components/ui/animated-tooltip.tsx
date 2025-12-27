@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -37,9 +38,11 @@ export function AnimatedTooltip({ items, className }: AnimatedTooltipProps) {
                 isActive ? "border-cyan-200/70 shadow-[0_0_0_2px_rgba(34,211,238,0.22)]" : "border-white/20",
               )}
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.name}
+                width={32}
+                height={32}
                 className="h-full w-full object-cover"
                 loading="lazy"
               />

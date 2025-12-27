@@ -135,9 +135,9 @@ function parseGeminiText(raw: any): any[] {
     }
 }
 
-export async function GET(request: Request) {
-    const { searchParams } = new URL(request.url);
-    const query = searchParams.get("query") || "Hackathons in India and Global for Developers";
+export async function GET(_request: Request) {
+    // const { searchParams } = new URL(request.url);
+    // const query = searchParams.get("query") || "Hackathons in India and Global for Developers";
 
     const apiKey = process.env.API_KEY;
 

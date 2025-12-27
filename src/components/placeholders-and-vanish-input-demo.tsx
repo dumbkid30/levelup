@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useState, useEffect } from "react";
 import { useDebounce } from "@/hooks/use-debounce";
-import { AnimatePresence, motion, stagger, useAnimate } from "framer-motion";
+import { motion, stagger, useAnimate } from "framer-motion";
 import { LinkPreview } from "@/components/ui/link-preview";
 
 const WordWrapper = ({ children }: { children: React.ReactNode }) => {
@@ -120,7 +120,7 @@ export default function PlaceholdersAndVanishInputDemo() {
 
     // Debounced query tracking (req: use debounce)
     // In a real app, this could fetch suggestions.
-    const debouncedQuery = useDebounce(query, 500);
+    const _debouncedQuery = useDebounce(query, 500);
 
     const placeholders = [
         "roadmap for data enginnering",

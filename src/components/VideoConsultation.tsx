@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import GradientButton from "@/components/GradientButton";
 
 export default function VideoConsultation() {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  // const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900">
@@ -66,10 +67,12 @@ export default function VideoConsultation() {
               className="flex items-center gap-4"
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500">
-                  <img
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500 relative">
+                  <Image
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
                     alt="Consultant"
+                    width={48}
+                    height={48}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -105,9 +108,11 @@ export default function VideoConsultation() {
               <div className="relative aspect-video bg-gray-900">
                 {/* Main Video - Consultant */}
                 <div className="relative w-full h-full">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                     alt="Iqram - Consultant"
+                    width={600}
+                    height={337}
                     className="w-full h-full object-cover"
                   />
 

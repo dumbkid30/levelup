@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import GradientButton from "@/components/GradientButton";
 import { CometCard } from "@/components/ui/comet-card";
@@ -73,11 +74,13 @@ export default function ProfessionalCourses() {
                 <div className="w-full cursor-pointer flex flex-col rounded-2xl border-0 bg-[#1F2121] p-3 saturate-100">
                   <div className="mx-2 flex-1">
                     <div className="relative mt-2 aspect-[3/4] w-full">
-                      <img
+                      <Image
                         loading="lazy"
                         className="absolute inset-0 h-full w-full rounded-xl object-cover contrast-100"
                         alt={course.title}
                         src={course.image}
+                        width={400}
+                        height={533}
                         style={{
                           boxShadow: "rgba(0, 0, 0, 0.3) 0px 5px 15px 0px",
                         }}

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import GradientButton from "@/components/GradientButton";
 
@@ -28,11 +29,11 @@ export default function StudyDestinations() {
     }
   ];
 
-  const universities = [
-    { name: "MIT", logo: "https://upload.wikimedia.org/wikipedia/en/4/44/MIT_Seal.svg" },
-    { name: "University of Leeds", logo: "https://upload.wikimedia.org/wikipedia/en/d/d2/University_of_Leeds_logo.svg" },
-    { name: "University of Queensland", logo: "https://upload.wikimedia.org/wikipedia/en/1/14/University_of_Queensland_Logo.svg" },
-  ];
+  // const universities = [
+  //   { name: "MIT", logo: "https://upload.wikimedia.org/wikipedia/en/4/44/MIT_Seal.svg" },
+  //   { name: "University of Leeds", logo: "https://upload.wikimedia.org/wikipedia/en/d/d2/University_of_Leeds_logo.svg" },
+  //   { name: "University of Queensland", logo: "https://upload.wikimedia.org/wikipedia/en/1/14/University_of_Queensland_Logo.svg" },
+  // ];
 
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900">
@@ -88,9 +89,11 @@ export default function StudyDestinations() {
                 className="group relative overflow-hidden rounded-2xl"
               >
                 <div className="aspect-[4/3] relative">
-                  <img
+                  <Image
                     src={destination.image}
                     alt={destination.name}
+                    width={400}
+                    height={300}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
 

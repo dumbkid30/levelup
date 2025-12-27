@@ -41,7 +41,7 @@ async function dismissCookieBanner(page: Page) {
     for (const selector of selectors) {
         const button = await page.$(selector);
         if (button) {
-            await button.click().catch(() => {});
+            await button.click().catch(() => { });
             break;
         }
     }
@@ -152,8 +152,8 @@ export async function scrapeAmbitionBox(companyName: string): Promise<CompanyIns
                     url = finalUrl || candidate;
                     break;
                 }
-            } catch (e) {
-                console.log(`[AmbitionBox Scraper] Error visiting ${candidate}: ${e}`);
+            } catch (_e) {
+                console.log(`[AmbitionBox Scraper] Error visiting ${candidate}: ${_e}`);
             }
         }
 
@@ -197,12 +197,12 @@ export async function scrapeAmbitionBox(companyName: string): Promise<CompanyIns
         // Wait for key content to ensure page is loaded
         try {
             await page.waitForSelector(".company-info, .rating-val, h1, h2", { timeout: 8000 });
-        } catch (e) {
+        } catch (_e) {
             console.log("Wait for selector failed, proceeding anyway...");
         }
         await page
             .waitForSelector(".review-card, .ab-review-card, .review-item, [itemprop=\"review\"]", { timeout: 8000 })
-            .catch(() => {});
+            .catch(() => { });
 
         // 4. Extract Data
         const finalReviewUrl = page.url() || url;
@@ -250,7 +250,7 @@ export async function scrapeAmbitionBox(companyName: string): Promise<CompanyIns
                     }
                 }
             }
-        } catch (e) {
+        } catch (_e) {
             console.log("Failed to extract rating");
         }
 
@@ -320,7 +320,7 @@ export async function scrapeAmbitionBox(companyName: string): Promise<CompanyIns
 
             if (result.pros?.length) data.pros = result.pros;
             if (result.cons?.length) data.cons = result.cons;
-        } catch (e) {
+        } catch (_e) {
             console.log("Failed to extract pros/cons");
         }
 
@@ -430,7 +430,7 @@ export async function scrapeAmbitionBox(companyName: string): Promise<CompanyIns
                 return results;
             });
             if (snippets.length) data.reviewsDetails = snippets;
-        } catch (e) {
+        } catch (_e) {
             console.log("Failed to extract reviews");
         }
 
@@ -447,7 +447,7 @@ export async function scrapeAmbitionBox(companyName: string): Promise<CompanyIns
                 await autoScroll(page);
                 await page
                     .waitForSelector(".salary-card, .salary-row, main, .salary-list", { timeout: 8000 })
-                    .catch(() => {});
+                    .catch(() => { });
 
                 const salaryInfo = await page.evaluate(() => {
                     const JUNK_KEYWORDS = [
@@ -589,7 +589,7 @@ export async function scrapeAmbitionBox(companyName: string): Promise<CompanyIns
                     }
                 }
 
-            } catch (e) {
+            } catch (_e) {
                 console.log("Failed to extract salary");
             }
         }

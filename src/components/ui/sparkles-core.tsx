@@ -22,7 +22,7 @@ export const SparklesCore = (props: SparklesCoreProps) => {
     id = "tsparticles",
     className,
     background = "transparent",
-    particleSize = 1,
+    particleSize: _particleSize = 1,
     minSize = 0.4,
     maxSize = 1,
     speed = 1,
@@ -40,7 +40,7 @@ export const SparklesCore = (props: SparklesCoreProps) => {
     });
   }, []);
 
-  const particlesLoaded = async (_container?: Container): Promise<void> => {};
+  const particlesLoaded = async (_container?: Container): Promise<void> => { };
 
   const options = useMemo(
     () => ({

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import Image from "next/image";
 
 export default function StudentTestimonials() {
   const testimonials = [
@@ -69,9 +69,11 @@ export default function StudentTestimonials() {
               {/* Profile Section */}
               <div className="flex items-center gap-4 mb-4">
                 <div className="relative">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
+                    width={48}
+                    height={48}
                     className="w-12 h-12 object-cover border-2 border-white/20 pixelated"
                   />
                   <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-black"></div>

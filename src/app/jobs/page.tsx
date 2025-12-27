@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
-import { IconBriefcase, IconExternalLink, IconLoader, IconRefresh, IconArrowLeft, IconArrowRight, IconMapPin, IconClock } from "@tabler/icons-react";
+import { IconBriefcase, IconExternalLink, IconArrowLeft, IconArrowRight, IconMapPin, IconClock } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";

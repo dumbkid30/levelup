@@ -1,7 +1,7 @@
 import { chromium } from "playwright";
 import { Job } from "../data";
 
-export async function scrapeRipplingJobs(query: string = "Software Engineer"): Promise<Job[]> {
+export async function scrapeRipplingJobs(_query: string = "Software Engineer"): Promise<Job[]> {
     const jobs: Job[] = [];
     let browser;
 

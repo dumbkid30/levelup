@@ -31,8 +31,8 @@ export default function JSCoursePage() {
     ];
 
     const totalTopics = modules.reduce((acc, module) => acc + module.topics.length, 0);
-    const freeTopics = modules.length * 2; // Assuming first 2 are free
-    const progress = Math.round((completedTopics.length / totalTopics) * 100);
+    // const freeTopics = modules.length * 2; // Assuming first 2 are free
+    // const progress = Math.round((completedTopics.length / totalTopics) * 100);
 
     return (
         <div className="min-h-screen bg-black text-white font-pixel">

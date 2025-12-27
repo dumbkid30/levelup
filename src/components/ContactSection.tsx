@@ -2,12 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import {
-    Mail,
-    MessageSquare,
-    Linkedin,
-    Twitter,
-    Github,
-    Disc
+    Mail
 } from "lucide-react";
 import { IconBrandDiscord, IconBrandGithub, IconBrandLinkedin, IconBrandReddit, IconBrandX } from "@tabler/icons-react";
 

@@ -8,7 +8,6 @@ import {
   IconBrandX,
   IconBrandWhatsapp
 } from "@tabler/icons-react";
-import { Mail } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {

@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Star, CheckCircle, ArrowLeft, BookOpen, Lightbulb, Play, Trash2, ChevronRight } from "lucide-react";
+import { Star, CheckCircle, ArrowLeft, Lightbulb, Play, Trash2 } from "lucide-react";
 import { useUserProgress } from "@/context/UserProgressContext";
 
 interface SubTopic {
@@ -110,8 +110,6 @@ export default function JSLessonView({ lessonId, title, subtopics = [], descript
         };
 
         try {
-            // Unsafe eval is used here for the playground purpose.
-            // eslint-disable-next-line no-eval
             eval(code);
             setOutput(logs.length > 0 ? logs : ["(No output)"]);
         } catch (err: any) {

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Job } from "@/lib/data";
-import { Briefcase, MapPin, DollarSign, Clock } from "lucide-react";
+import { Briefcase, MapPin, DollarSign } from "lucide-react";
 
 interface JobCardProps {
     job: Job;

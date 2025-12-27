@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SparklesCore } from "@/components/ui/sparkles-core";
@@ -181,9 +182,11 @@ export default function MentorsPage() {
                     <div className="absolute inset-0 bg-[url('/assets/noise.png')] opacity-10" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                     {mentor.image ? (
-                      <img
+                      <Image
                         src={mentor.image}
                         alt={mentor.name}
+                        width={400}
+                        height={300}
                         className="h-full w-full object-cover"
                       />
                     ) : (

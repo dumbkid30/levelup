@@ -112,7 +112,7 @@ async function handleRequest(request: Request) {
   const start = (page - 1) * limit;
   const paginated = sorted
     .slice(start, start + limit)
-    .map(({ timestamp, ...job }) => job);
+    .map(({ timestamp: _timestamp, ...job }) => job);
 
   return NextResponse.json({
     jobs: paginated,

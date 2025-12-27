@@ -17,8 +17,6 @@ registry.register("Atlassian", scrapeAtlassianJobs);
 registry.register("Heizen", scrapeHeizenJobs);
 registry.register("Wellfound", scrapeWellfoundJobs);
 
-const TEN_HOURS_MS = 10 * 60 * 60 * 1000;
-
 // Strict whitelist filters requested by user
 const ALLOWED_KEYWORDS = ["frontend", "sde", "software engineer", "backend", "nodejs", "product", "manager", "design", "marketing", "data", "science", "analyst", "ux", "ui", "developer", "engineer"];
 
