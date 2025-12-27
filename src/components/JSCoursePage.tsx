@@ -39,7 +39,7 @@ export default function JSCoursePage() {
             {/* Hero Banner */}
             <div className="relative h-64 md:h-80 overflow-hidden">
                 <Image
-                    src="/Assets/Assets/public/course-banner.gif"
+                    src="/assets/course-banner.gif"
                     alt="JS Course Banner"
                     fill
                     className="object-cover pixelated"

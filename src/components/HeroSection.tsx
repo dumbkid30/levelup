@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Full-screen GIF background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/Assets/Assets/public/hero.gif"
+          src="/assets/hero.gif"
           alt="Lofi Coding Scene"
           fill
           className="object-cover pixelated"
